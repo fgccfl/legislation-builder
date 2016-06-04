@@ -17,12 +17,7 @@ session_set_cookie_params(3 * 86400);
 session_cache_limiter('nocache');
 session_start();
 
-// Cross-site request forgery token generation.
-if (isset($_SESSION['csrf'])) {
-    $last_csrf = $_SESSION['csrf'];
-    unset($_SESSION['csrf']);
-}
-$_SESSION['csrf'] = uniqid(md5(microtime(true)) . '.', true);
+require_once __DIR__ . '/csrf.php';
 
 // Convenient way to get the page's URI.
 $thisPage = filter_input(INPUT_SERVER, 'PHP_SELF', FILTER_SANITIZE_URL);

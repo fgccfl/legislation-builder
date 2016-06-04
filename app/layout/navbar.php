@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.php">
-                <i class="fa fa-university text-danger" aria-hidden="true"></i>
+                <i class="fa fa-institution text-danger" aria-hidden="true"></i>
                 <span class="text-primary">Legislation Builder</span>
             </a>
         </div>
